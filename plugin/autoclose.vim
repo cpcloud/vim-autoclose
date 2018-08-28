@@ -117,7 +117,6 @@ fun! <SID>AutoCloseMappingsOff() " {{{2
         iunmap <C-h>
         iunmap <Del>
         iunmap <Esc>
-        iunmap `
         iunmap {<CR>
         let s:autoclose_mapped = 0
         echo "AutoClose Off"

@@ -76,6 +76,17 @@ nmap <Plug>ToggleAutoCloseMappings :call <SID>ToggleAutoCloseMappings()<CR>
 if (!hasmapto( '<Plug>ToggleAutoCloseMappings', 'n' ))
     command! AutoCloseToggle call <SID>ToggleAutoCloseMappings()
 endif
+
+nmap <Plug>AutoCloseMappingsOff :call <SID>AutoCloseMappingsOff()<CR>
+if (!hasmapto( '<Plug>AutoCloseMappingsOff', 'n' ))
+    command! AutoCloseOff call <SID>AutoCloseMappingsOff()
+endif
+
+nmap <Plug>AutoCloseMappingsOn :call <SID>AutoCloseMappingsOn()<CR>
+if (!hasmapto( '<Plug>AutoCloseMappingsOn', 'n' ))
+    command! AutoCloseOn call <SID>AutoCloseMappingsOn()
+endif
+
 fun! <SID>AutoCloseMappingsOn() " {{{2
     inoremap <silent> " <C-R>=<SID>QuoteDelim('"')<CR>
     inoremap <silent> ` <C-R>=<SID>QuoteDelim('`')<CR>
